@@ -13,10 +13,10 @@ const TodoList: React.FC<TodoListProps> = ({ tasks })=> {
     <div className="overflow-x-auto mt-20">
     <table className="table w-table-20">
       {/* head */}
-      <thead>
+      <thead style={{ backgroundColor: "lightgray" }}>
         <tr>
-          <th>Tasks</th>
-          <th>Actions</th>
+        <th style={{ fontSize: "15px" }}>Tasks</th>
+        <th style={{ fontSize: "15px" }}>Actions</th>
         </tr>
       </thead>
       <tbody>
