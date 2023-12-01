@@ -25,3 +25,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+.incomplete-task {
+  background-color: #ffffff; /* Màu nền của task chưa hoàn thành */
+  color: #000000; /* Màu chữ của task chưa hoàn thành */
+}
+
+.completed-task {
+  text-decoration: line-through; /* Gạch chân chữ của task đã hoàn thành */
+  background-color: #4A708B; /* Màu nền của task đã hoàn thành */
+  color: white; /* Màu chữ của task đã hoàn thành */
+}
+.list-icon {
+  margin-right: 0.5rem; /* Điều chỉnh khoảng cách giữa biểu tượng và tiêu đề */
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+

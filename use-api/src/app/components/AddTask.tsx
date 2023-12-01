@@ -26,7 +26,10 @@ const AddTask = () => {
     };
 
     return (
+        
         <div style={{ position: "absolute", top:"8%", left: "46%" }}>
+        <br></br>
+        <br></br>
         <button 
         onClick = {() => setModalOpen(true)}  
         className='flex items-center bg-blue-300 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full'>
