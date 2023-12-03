@@ -6,7 +6,6 @@ import Task from "./Task";
 interface TodoListProps {
     tasks: ITask[];
   }
-  const taskNameClassName = "task-name"; // Tên lớp CSS cho tên task
   
 const TodoList: React.FC<TodoListProps> = ({ tasks })=> {
     return (

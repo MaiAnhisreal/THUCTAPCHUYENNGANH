@@ -32,7 +32,7 @@ const AddTask = () => {
         <br></br>
         <button 
         onClick = {() => setModalOpen(true)}  
-        className='flex items-center bg-blue-300 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full'>
+        className='btn items-center bg-blue-300 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full'>
         Add Task
         <CgAdd className="ml-2" size={20} />
         </button>
