@@ -3,7 +3,7 @@ const SNT = (n) =>{
     if(n<2){
         checkSo = false; 
     }else{
-        for(let i=2; i < n-1 ; i++){
+        for(let i=2; i < Math.sqrt(n); i++){
             if(n%i == 0){
                 checkSo = false;
                 break;
@@ -16,4 +16,4 @@ const SNT = (n) =>{
         console.log(n + " là số nguyên tố!");
     }
 }
-SNT(13);
+SNT(77);

@@ -8,4 +8,4 @@ const isPalindrome = (string) =>{
         }
 }
 
-console.log(isPalindrome("Killua"));
+console.log(isPalindrome("KilluaulliK"));

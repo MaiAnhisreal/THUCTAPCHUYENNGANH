@@ -7,4 +7,4 @@ const boiSoChung = (a,b,limit) =>{
     }
     return arr;
 }
-console.log(boiSoChung(3,4,20));
+console.log(boiSoChung(3,4,200));

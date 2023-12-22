@@ -12,7 +12,7 @@ const factorialCal = n =>{
         console.log(`Giai thừa của ${n} là ${result}`);
     }
 }
-factorialCal(5);
+factorialCal(4);
 
 //Đệ quy
 

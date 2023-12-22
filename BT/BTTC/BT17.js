@@ -1,2 +1,4 @@
-const createRandomNumber = (min,max) => Math.random()*(max - min);
-console.log(createRandomNumber(10,120))
+const createRandomNumber = (min,max) => {
+    return Math.round(Math.random()*(max - min) + min);
+};
+console.log(createRandomNumber(-100,-20))

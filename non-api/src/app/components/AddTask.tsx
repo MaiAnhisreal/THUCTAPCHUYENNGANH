@@ -15,7 +15,6 @@ interface AddTaskProps {
 }
 
 const AddTask: React.FC<AddTaskProps> = ({ tasks, setTasks }) => {
-  const router = useRouter();
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [taskText, setTaskText] = useState<string>("");
 

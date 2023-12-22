@@ -3,9 +3,6 @@ split : chuyển chuỗi sang một mảng các kí tự
 reverse: đảo mảng trực tiếp
 */
 
-const daoChuoi = (array) =>{
-    let chuoi = array.split("").reverse();
-    return chuoi;
-}
+const daoChuoi = (array) =>array.split("").reverse().join('');
 
 console.log(daoChuoi("lmao"));

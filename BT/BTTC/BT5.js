@@ -1,6 +1,6 @@
 let array = [12,100,18,2,1,8];
 
-const bigestNumber = () =>{
+const bigestNumber = (array) =>{
     let max = array[0];
     for( let i = 0; i < array.length; i++){
         if(max < array[i]){ 
@@ -9,4 +9,6 @@ const bigestNumber = () =>{
     }
     console.log(max + " là số lớn nhất trong mảng")
 }
-bigestNumber();
+bigestNumber(array);
+
+console.log(Math.max(...array))

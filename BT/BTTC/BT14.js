@@ -13,4 +13,4 @@ const perfectNumber = n =>{
         console.log( n + " không phải là số hoàn hảo");
     }
 }
-perfectNumber(16);
+perfectNumber(8128);

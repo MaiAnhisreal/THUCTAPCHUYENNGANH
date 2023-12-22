@@ -1,11 +1,6 @@
 
-const arr = ["siuuuuuuuuu","lmao","hihi"];
+const arr = ["Siuuuuuuuuu","lmao","hihi"];
 
-arr.sort((a,b) => {
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-    if (a == b) return 0;
-    if (a > b) return 1;
-    return -1;
-});
+arr.sort((a,b) => a.localeCompare(b))
+
 console.log(arr);
