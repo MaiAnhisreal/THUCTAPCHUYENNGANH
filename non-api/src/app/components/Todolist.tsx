@@ -1,7 +1,6 @@
 import React from "react";
 import { ITask } from "../../../types/tasks";
 import Task from "./Task";
-import AddTask from "./AddTask";
 
 interface TodoListProps {
   tasks: ITask[];
@@ -25,7 +24,6 @@ const TodoList: React.FC<TodoListProps> = ({ tasks, setTasks }) => {
           ))}
         </tbody>
       </table>
-      <AddTask tasks={tasks} setTasks={setTasks} />
     </div>
   );
 };

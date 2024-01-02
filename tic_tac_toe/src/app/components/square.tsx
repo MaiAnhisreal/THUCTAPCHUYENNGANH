@@ -6,8 +6,12 @@ interface ISquareProps {
 }
 
 export const Squares: FC<ISquareProps> = ({ value, onClick }) => {
+  const isXValue = value === "X";
+  const isOValue = value === "O";
+  const squareClassName = `square ${isXValue ? "x" : isOValue ? "o" : ""}`;
   return (
-    <div onClick={onClick} className="cursor-pointer w-20 h-20 border flex justify-center items-center font-black text-3xl">
+    
+    <div onClick={onClick} className={squareClassName}>
       {value}
     </div>
   );

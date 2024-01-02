@@ -84,18 +84,18 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #8cac5c;
+  border: 1px solid #fdfdfd;
   float: left;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 57px;
+  height: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 60px;
 }
 
 .board-row:after {
@@ -117,5 +117,14 @@ body {
 }
 
 .highlight {
-  background-color: lightblue;
+  background-color: rgb(205, 227, 233);
 }
+
+.x {
+  color: red; /* Màu chữ cho X */
+  font-weight: bold; /* Độ đậm cho X */
+}
+
+.o {
+  color: blue; /* Màu chữ cho O */
+  font-style: bold; /* Kiểu chữ nghiêng cho O */}

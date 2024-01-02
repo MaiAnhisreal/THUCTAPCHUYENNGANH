@@ -12,7 +12,7 @@ interface IBoardProps {
   winCount?: number;
 }
 
-const Board: FC<IBoardProps> = ({ size = 5, winCount = 5 }) => {
+const Board: FC<IBoardProps> = ({ size = 5, winCount = 5}) => {
   const [board, setBoard] = useState<TBoard>(new Array(size * size).fill(null));
   const [history, setHistory] = useState<THistory>([board]);
   const [currentStep, setCurrentStep] = useState(0);
@@ -24,10 +24,14 @@ const Board: FC<IBoardProps> = ({ size = 5, winCount = 5 }) => {
     const newBoard = [...board];
     const newHistory = [...history];
 
-    if (newBoard[index] !== null) return;
+    if (winner || board[index] !== null) {
+      return; 
+    }
 
     //lưu value của cell
+
     newBoard[index] = isX ? "X" : "O";
+
     setBoard(newBoard);
 
     //lưu lịch sử
@@ -79,7 +83,7 @@ const Board: FC<IBoardProps> = ({ size = 5, winCount = 5 }) => {
             newCol += dy;
           }
   
-          if (count === size) {
+          if (count === winCount) {
             setWinner(cell);
             return;
           }
@@ -92,9 +96,11 @@ const Board: FC<IBoardProps> = ({ size = 5, winCount = 5 }) => {
     }
   };
 
+
   return (
-    <div className="flex gap-10 justify-center items-center h-screen w-screen">
-      {winner && <div className="p-10 bg-red-50 ">Winner: {winner}</div>}
+    <div className="">
+     <div className="flex gap-10 justify-center items-center flex-col h-screen w-screen">
+      {winner && <div className="p-10 bg-orange-200 ">Winner: {winner}</div>}
       <div className="">
         {new Array(size).fill(null).map((_value, row) => {
           return (
@@ -104,20 +110,18 @@ const Board: FC<IBoardProps> = ({ size = 5, winCount = 5 }) => {
               })}
             </div>
           );
-        })}
+        })} 
       </div>
-      <div className="">
+      <div className="flex flex-row flex-wrap">
   {history.map((value: TBoard, index: number) => {
     return (
       <div key={index} className={`flex gap-4 cursor-pointer ${index === currentStep ? 'highlight' : ''}`} onClick={() => onClickHistory(index)}>
-        <div className=""> Go to move #{index}</div>
-        {index === currentStep && (
-          <div className="">{value.map((e, i) => <span key={i}>{e || "null"}{i !== value.length - 1 && "-"}</span>)}</div>
-        )}
+        <div className="cursor-pointer border p-2 "> Move {index}</div>
       </div>
     );
   })}
-</div>
+  </div>
+     </div>
     </div>
   );
 };

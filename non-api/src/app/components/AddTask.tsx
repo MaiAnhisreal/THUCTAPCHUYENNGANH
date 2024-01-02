@@ -5,7 +5,6 @@ import { FormEventHandler, useState } from "react";
 import { CgAdd } from "react-icons/cg";
 import Modal from "./Modal";
 import React from "react";
-import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";
 import { ITask } from "../../../types/tasks";
 
